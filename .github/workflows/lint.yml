@@ -5,7 +5,7 @@ on:
     paths: "*.py"
 
 jobs:
-  code:
+  code-linter:
     runs-on: ubuntu-latest
     steps:
       - name: "Checkout/clone the code"
@@ -13,4 +13,7 @@ jobs:
 
       - name: Install Linter
         run: pip install ruff
+
+      - name: "Checking linter code"
+        run: ruff check .
   
