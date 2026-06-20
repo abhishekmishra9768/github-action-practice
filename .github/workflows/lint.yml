@@ -11,6 +11,12 @@ jobs:
       - name: "Checkout/clone the code"
         uses: actions/checkout@v4
 
+      # Step 2: Install and set up the Python environment
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12' # Specify your required Python version  
+
       - name: Install Linter
         run: pip install ruff
 
